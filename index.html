@@ -1,67 +1,222 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGen | Advanced Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Bhagyashree Mali | Creative World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f2027, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Floating background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #00f5ff, #7b2cff);
+      filter: blur(120px);
+      animation: float 10s infinite alternate ease-in-out;
+    }
+
+    .orb.one { top: 10%; left: 10%; }
+    .orb.two { bottom: 10%; right: 15%; animation-delay: 2s; }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-80px); }
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #00f5ff, #ff6ec7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f5ff; }
+      to { text-shadow: 0 0 30px #ff6ec7; }
+    }
+
+    header p {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    .title {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    /* 3D Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      perspective: 1000px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 30px;
+      transition: transform 0.5s, box-shadow 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover {
+      transform: rotateY(12deg) rotateX(8deg) scale(1.05);
+      box-shadow: 0 30px 60px rgba(0, 245, 255, 0.4);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #00f5ff;
+    }
+
+    .card p {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* Fun text animation */
+    .typing {
+      border-right: 2px solid #00f5ff;
+      display: inline-block;
+      padding-right: 5px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Next<span>Gen</span>.</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#" class="btn-nav">Get Started</a></li>
-        </ul>
-    </nav>
+  <div class="bg">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+  </div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Build the <span class="gradient-text">Future</span> Today</h1>
-            <p>Experience the next generation of web design. Fast, responsive, and aesthetically pleasing solutions for your brand.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn-primary">Start Building</a>
-                <a href="#" class="btn-secondary"><i class="fas fa-play"></i> Watch Demo</a>
-            </div>
-            
-            <div class="stats-card">
-                <div class="icon"><i class="fas fa-rocket"></i></div>
-                <div>
-                    <h4>10x Faster</h4>
-                    <p>Performance Speed</p>
-                </div>
-            </div>
-        </div>
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>Bhagyashree Mali</h1>
+      <p>
+        A world of <span class="typing">creativity ✨</span><br>
+        Art • Dance • DIY • Stories • AI Curiosity
+      </p>
+    </div>
+  </header>
 
-        <div class="hero-image">
-            <div class="glowing-circle"></div>
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abstract 3D Shape">
-        </div>
-    </header>
+  <!-- ABOUT -->
+  <section>
+    <h2 class="title">🌸 About Me</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Creative Soul</h3>
+        <p>I love expressing ideas through sketches, handmade crafts, and aesthetic creations that reflect emotions.</p>
+      </div>
+      <div class="card">
+        <h3>Story & Art Lover</h3>
+        <p>Novels, stories, visuals, and imagination inspire me deeply and shape my creativity.</p>
+      </div>
+      <div class="card">
+        <h3>Dance & Rhythm</h3>
+        <p>Dance is my way of expressing joy, energy, and inner emotions without words.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="features">
-        <div class="feature-card">
-            <i class="fas fa-layer-group"></i>
-            <h3>Modular Design</h3>
-            <p>Built with reusable components for maximum scalability.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Lightning Fast</h3>
-            <p>Optimized code ensures your site loads in milliseconds.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Secure Core</h3>
-            <p>Enterprise-grade security standards built right in.</p>
-        </div>
-    </section>
+  <!-- INTERESTS -->
+  <section>
+    <h2 class="title">💫 What I Enjoy</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🎨 Art & Sketching</h3>
+        <p>Turning blank pages into meaningful visuals.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 AI Curiosity</h3>
+        <p>Exploring how intelligence and creativity meet through technology.</p>
+      </div>
+      <div class="card">
+        <h3>✂️ DIY & Crafts</h3>
+        <p>Creating handmade things through my channel <b>Crafthoria</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (PASSION) -->
+  <section>
+    <h2 class="title">🚀 Passion Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>📸 Image Caption Generator</h3>
+        <p>A creative blend of AI & imagination that describes images in human language.</p>
+      </div>
+      <div class="card">
+        <h3>🎥 Divine Wisdom</h3>
+        <p>Videos that focus on positivity, spirituality, and meaningful thoughts.</p>
+      </div>
+      <div class="card">
+        <h3>🧵 Crafthoria</h3>
+        <p>A DIY & craft space where creativity turns into art.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    ✨ Designed with creativity & passion by Bhagyashree ✨
+  </footer>
 
 </body>
 </html>
