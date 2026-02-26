@@ -6,6 +6,22 @@ Welcome to my personal landing page—a digital space where **art, dance, curios
 
 ---
 
+## 📱 Responsive Previews
+
+### 💻 Laptop View
+
+![Laptop Preview](assets/screenshots/laptop_preview.png)
+
+### 📟 Tablet View
+
+![Tablet Preview](assets/screenshots/tablet_preview.png)
+
+### 📲 Mobile View
+
+![Mobile Preview](assets/screenshots/mobile_preview.png)
+
+---
+
 ## 🌈 The Experience
 
 This page is designed with a **Dark, Dreamy & Modern** aesthetic, featuring:
